@@ -1,0 +1,35 @@
+<template>
+  <div class="spinner-container">
+    <div class="spinner"></div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "LoadingSpinner",
+};
+</script>
+
+<style>
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #ff0000;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style>
